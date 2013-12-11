@@ -6,6 +6,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>Image</th>
         <th>Description</th>
         <th>User ID</th>
         <th></th>
@@ -16,6 +17,7 @@
     <tbody>
       <% @pins.each do |pin| %>
         <tr>
+          <td><%= image_tag pin.image.url(:medium) %></td>
           <td><%= pin.description %></td>
           <td><%= pin.user.email if pin.user %></td>
           <td><%= link_to 'Show', pin %></td>
