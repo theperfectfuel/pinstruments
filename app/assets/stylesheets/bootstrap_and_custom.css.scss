@@ -7,8 +7,17 @@ $jumbotron-bg: #BD3A31;
 	text-align: center;
 }
 
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
 .navbar-brand {
 	font-weight: bold;
 	font-size: 1.8em;
 	color: #BD3A31 !important;
+}
+
+.jumbotron {
+	background: url('crowd-home.jpg') no-repeat fixed center;
 }
