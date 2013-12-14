@@ -1,7 +1,9 @@
 Pinstruments::Application.routes.draw do
+  get "users/show"
   resources :pins
 
   devise_for :users
+  get 'users/:id' => 'users#show', as: :user
   root "pins#index"
   get "about" => "pages#about"
   
