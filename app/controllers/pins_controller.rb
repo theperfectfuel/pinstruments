@@ -8,10 +8,6 @@ class PinsController < ApplicationController
   # GET /pins.js
   def index
     @pins = Pin.all.order("created_at DESC").page(params[:page]).per_page(20)
-    respond_to do |format|
-        format.html
-        format.js
-    end
   end
 
   # GET /pins/1
