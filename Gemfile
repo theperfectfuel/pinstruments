@@ -32,6 +32,10 @@ gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate', '~> 3.0'
 gem "will_paginate-bootstrap", "~> 1.0.0"
 
+group :test do
+	gem 'shoulda'
+end
+
 group :development, :test do
 	gem 'sqlite3'
 end
