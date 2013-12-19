@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pins
+  has_many :user_fans
+  has_many :fans, through: :user_fans
 
   validates :name, presence: true
 end
