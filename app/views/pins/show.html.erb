@@ -8,7 +8,7 @@
 
 				<div class="panel-body">
 					<p><%= @pin.description %></p>
-					<p><strong>Posted by <%= link_to @pin.user.name, @pin.user if @pin.user %></strong></p>
+					<p><strong>Posted by <%= link_to @pin.user.profile_name, @pin.user if @pin.user %></strong></p>
 				</div>
 
 				<div class="panel-footer">

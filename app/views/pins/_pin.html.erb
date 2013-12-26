@@ -5,7 +5,7 @@
         <div class="panel-body">
           <%= pin.description %><br />
           <hr>
-          <strong>Posted by <%= link_to pin.user.name if pin.user %></strong>
+          <strong>Posted by <%= link_to pin.user.profile_name if pin.user %></strong>
           <% if pin.user == current_user %>
 
             <div class="actions">

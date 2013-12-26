@@ -5,16 +5,22 @@
 # below each fixture, per the syntax in the comments below
 #
 bob:
- name: "bob"
- email: "bob@theperfectfuel.com"
+ profile_name: "bob"
+ first_name: "bobby"
+ last_name: "hill"
+ email: "bobby@kingofhill.com"
  encrypted_password: "password"
 
 tim:
- name: "tim"
+ profile_name: "timmy"
+ first_name: "tim"
+ last_name: "feld"
  email: "tim@theperfectfuel.com"
  encrypted_password: "password"
 
 stew:
- name: "stew"
+ profile_name: "stewie"
+ first_name: "stewart"
+ last_name: "wilson"
  email: "stew@theperfectfuel.com"
  encrypted_password: "password"

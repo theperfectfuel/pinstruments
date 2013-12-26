@@ -30,7 +30,8 @@ gem 'paperclip', '~> 3.0'
 gem 'aws-sdk', '~> 1.20.0' 
 gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate', '~> 3.0'
-gem "will_paginate-bootstrap", "~> 1.0.0"
+gem 'will_paginate-bootstrap', '~> 1.0.0'
+gem 'simple_form', '~> 3.0.0'
 
 group :test do
 	gem 'shoulda'

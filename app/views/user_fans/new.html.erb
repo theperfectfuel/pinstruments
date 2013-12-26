@@ -1,0 +1,16 @@
+<% if @fan %>
+	<h1><%= @fan.name %></h1>
+	<p>Do you really want to fan <%= @fan.name %>?</p>
+
+	<%= form_for @user_fan, method: :post do |form| %>
+
+		<div class="form form-actions">
+			<% form.hidden_field :fan_id, value: @fan %>
+
+			<%= submit_tag "Yes, Add Fan", class: 'btn btn-primary' %>
+			<%= link_to "Cancel", profile_path(@fan), class: 'btn' %>
+
+		</div>
+
+	<% end %>
+<% end %>
