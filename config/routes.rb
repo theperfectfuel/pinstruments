@@ -1,12 +1,21 @@
 Pinstruments::Application.routes.draw do
+  get "profiles/show"
   get "users/show"
   resources :pins
 
   devise_for :users
+
+  devise_scope :user do
+    get 'register', to: 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+
   get 'users/:id' => 'users#show', as: :user
   root "pins#index"
   get "about" => "pages#about"
   
+  get '/:id', to: 'profiles#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

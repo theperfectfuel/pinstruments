@@ -7,8 +7,15 @@
 				</div>
 
 				<div class="panel-body">
-					<p><%= @pin.description %></p>
-					<p><strong>Posted by <%= link_to @pin.user.profile_name, @pin.user if @pin.user %></strong></p>
+					<div class="pin-description"><%= @pin.description %></div>
+					<div class="pin-info">
+						<div class="pin-avatar pull-left">
+							<%= image_tag @pin.user.gravatar_url %>
+						</div>
+						<div class="pin-links">
+							<%= link_to @pin.user.profile_name, @pin.user if @pin.user %>
+						</div>
+					</div>
 				</div>
 
 				<div class="panel-footer">

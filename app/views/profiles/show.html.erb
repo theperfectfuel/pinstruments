@@ -1,0 +1,44 @@
+<div class="jumbotron">
+  <div class="container panel panel-default center">
+      <h1><%= @user.profile_name %></h1>
+      <hr>
+      <%= @user.pins.count %> Pins
+  </div>
+</div>
+
+<div id="pins" class="transitions-enabled">
+
+  <% @pins.each do |pin| %>
+    <div class="box panel panel-default">
+      <%= link_to image_tag(pin.image.url(:medium)), pin %>
+        <div class="panel-body">
+          <%= pin.description %><br />
+          <hr>
+          <strong>Posted by <%= link_to pin.user.profile_name, pin.user.profile_name if pin.user %></strong>
+          <% if pin.user == current_user %>
+
+            <div class="actions">
+              <div class="pull-left">
+                <%= link_to edit_pin_path(pin) do %>
+                  <span class="glyphicon glyphicon-edit"></span>
+                  Edit
+                <% end %>
+              </div>
+
+              <div class="pull-right">
+                <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <span class="glyphicon glyphicon-trash"></span>
+                  Delete
+                <% end %>
+              </div>
+            </div>
+
+          <% end %>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="center">
+  <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+</div>
