@@ -2,7 +2,8 @@
   <div class="container panel panel-default center">
       <h1><%= @user.profile_name %></h1>
       <hr>
-      <%= @user.pins.count %> Pins
+      <div><%= @user.pins.count %> Pins</div>
+      <div><%= link_to "Be a Fan", new_user_fan_path(fan_id: @user) %></div>
   </div>
 </div>
 

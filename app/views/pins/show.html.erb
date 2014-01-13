@@ -13,7 +13,7 @@
 							<%= image_tag @pin.user.gravatar_url %>
 						</div>
 						<div class="pin-links">
-							<%= link_to @pin.user.profile_name, @pin.user if @pin.user %>
+							<%= link_to @pin.user.profile_name, profile_path(@pin.user.profile_name) if @pin.user %>
 						</div>
 					</div>
 				</div>

@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  def to_param
+    profile_name
+  end
+
   def gravatar_url
     stripped_email = email.strip
     downcased_email = stripped_email.downcase

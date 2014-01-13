@@ -50,4 +50,5 @@ class UserTest < ActiveSupport::TestCase
 		users(:bob).fans.reload
 		assert users(:bob).fans.include?(users(:stew))
 	end
+	
 end
