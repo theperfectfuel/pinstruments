@@ -14,17 +14,25 @@ body {
 .navbar {
 	border-radius: 0;
 	margin-bottom: 0;
+	min-height: 60px;
 }
 
 .navbar-brand {
 	font-weight: bold;
 	font-size: 1.8em;
-	color: #BD3A31 !important;
+	color: #fff !important;
 }
 
 .jumbotron {
-	color: #BD3A31;
-	background: url(image-path('crowd-home2.jpg')) no-repeat fixed;
+	color: #fff;
+	background: url(image-path('guitar-closeup-banner.jpg')) no-repeat fixed right top;
+	min-height: 300px;
+	border-bottom: 2px solid white;
+	box-shadow: 4px 4px 5px #aaa;
+}
+
+.jumbotron h1 {
+	text-shadow: 4px 3px 4px black;
 }
 
 .box img {
